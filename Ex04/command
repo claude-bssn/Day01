@@ -1,0 +1,56 @@
+drwxrwxr-x  2 admin  staff  64  1 jan  2077 test0
+iMac-ITA-20:Ex04 admin$ mkdir test1 test3 test5
+iMac-ITA-20:Ex04 admin$ ls
+test0	test1	test3	test5
+iMac-ITA-20:Ex04 admin$ touch -t 207701010000 test1 test3 test5
+iMac-ITA-20:Ex04 admin$ ls -l
+total 0
+drwxrwxr-x  2 admin  staff  64  1 jan  2077 test0
+drwxr-xr-x  2 admin  staff  64  1 jan  2077 test1
+drwxr-xr-x  2 admin  staff  64  1 jan  2077 test3
+drwxr-xr-x  2 admin  staff  64  1 jan  2077 test5
+iMac-ITA-20:Ex04 admin$ chmod 722 test1 
+iMac-ITA-20:Ex04 admin$ ls -l
+total 0
+drwxrwxr-x  2 admin  staff  64  1 jan  2077 test0
+drwx-w--w-  2 admin  staff  64  1 jan  2077 test1
+drwxr-xr-x  2 admin  staff  64  1 jan  2077 test3
+drwxr-xr-x  2 admin  staff  64  1 jan  2077 test5
+iMac-ITA-20:Ex04 admin$ chmod 744 test1 
+iMac-ITA-20:Ex04 admin$ ls -l
+total 0
+drwxrwxr-x  2 admin  staff  64  1 jan  2077 test0
+drwxr--r--  2 admin  staff  64  1 jan  2077 test1
+drwxr-xr-x  2 admin  staff  64  1 jan  2077 test3
+drwxr-xr-x  2 admin  staff  64  1 jan  2077 test5
+iMac-ITA-20:Ex04 admin$ chmod 775 test3 
+iMac-ITA-20:Ex04 admin$ ls -l
+total 0
+drwxrwxr-x  2 admin  staff  64  1 jan  2077 test0
+drwxr--r--  2 admin  staff  64  1 jan  2077 test1
+drwxrwxr-x  2 admin  staff  64  1 jan  2077 test3
+drwxr-xr-x  2 admin  staff  64  1 jan  2077 test5
+iMac-ITA-20:Ex04 admin$ chmod 111 test5 
+iMac-ITA-20:Ex04 admin$ touch -t 207701010000 test2 test4
+iMac-ITA-20:Ex04 admin$ ls
+test0	test1	test2	test3	test4	test5
+iMac-ITA-20:Ex04 admin$ chmod 664 test2 
+iMac-ITA-20:Ex04 admin$ ls -l
+total 0
+drwxrwxr-x  2 admin  staff  64  1 jan  2077 test0
+drwxr--r--  2 admin  staff  64  1 jan  2077 test1
+-rw-rw-r--  1 admin  staff   0  1 jan  2077 test2
+drwxrwxr-x  2 admin  staff  64  1 jan  2077 test3
+-rw-r--r--  1 admin  staff   0  1 jan  2077 test4
+d--x--x--x  2 admin  staff  64  1 jan  2077 test5
+iMac-ITA-20:Ex04 admin$ chmod 664 test4 
+iMac-ITA-20:Ex04 admin$ ls -l
+total 0
+drwxrwxr-x  2 admin  staff  64  1 jan  2077 test0
+drwxr--r--  2 admin  staff  64  1 jan  2077 test1
+-rw-rw-r--  1 admin  staff   0  1 jan  2077 test2
+drwxrwxr-x  2 admin  staff  64  1 jan  2077 test3
+-rw-rw-r--  1 admin  staff   0  1 jan  2077 test4
+d--x--x--x  2 admin  staff  64  1 jan  2077 test5
+iMac-ITA-20:Ex04 admin$ ‘
+
